@@ -32,10 +32,7 @@ static NSDIiiPTR CLCopyAppsUsingLocation;
 }
 
 -(void)updateLocationApps {
-    if (self.locationApps) {
-        [self.locationApps release];
-    }
-    self.locationApps = CLCopyAppsUsingLocation(0, 0);
+    self.locationApps = [CLCopyAppsUsingLocation(0, 0) autorelease];
 }
 
 -(void)updateAppList {
