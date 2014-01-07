@@ -10,6 +10,7 @@
 
 +(void)load;
 +(id)sharedManager;
+-(void)dealloc;
 -(void)updateLocationApps;
 -(void)updateAppList;
 -(NSString *)iconForIndex:(NSUInteger)index;

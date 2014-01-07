@@ -62,4 +62,11 @@ static NSDIiiPTR CLCopyAppsUsingLocation;
     return nil;
 }
 
+-(void)dealloc {
+    [_locationApps release];
+    [_appList release];
+
+    [super dealloc];
+}
+
 @end
