@@ -28,13 +28,6 @@ static NSDIiiPTR CLCopyAppsUsingLocation;
     CLCopyAppsUsingLocation = (NSDIiiPTR)dlsym(RTLD_DEFAULT, "CLCopyAppsUsingLocation");
 }
 
--(id)init {
-    if (self = [super init]) {
-
-    }
-    return self;
-}
-
 -(void)updateLocationApps {
     self.locationApps = [CLCopyAppsUsingLocation(0, 0) autorelease];
 }
