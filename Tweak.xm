@@ -23,7 +23,6 @@
 
         [self addSubview:imageView];
         [imageView release];
-        [icon release];
     }
 }
 
