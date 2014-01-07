@@ -24,9 +24,13 @@ static NSDIiiPTR CLCopyAppsUsingLocation;
     return sharedManager;
 }
 
++(void)load {
+    CLCopyAppsUsingLocation = (NSDIiiPTR)dlsym(RTLD_DEFAULT, "CLCopyAppsUsingLocation");
+}
+
 -(id)init {
     if (self = [super init]) {
-        CLCopyAppsUsingLocation = (NSDIiiPTR)dlsym(RTLD_DEFAULT, "CLCopyAppsUsingLocation");
+
     }
     return self;
 }
