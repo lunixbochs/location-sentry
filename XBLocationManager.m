@@ -29,6 +29,9 @@ static NSDIiiPTR CLCopyAppsUsingLocation;
 }
 
 -(void)updateLocationApps {
+    if (CLCopyAppsUsingLocation == NULL) {
+        return;
+    }
     self.locationApps = [CLCopyAppsUsingLocation(0, 0) autorelease];
 }
 
