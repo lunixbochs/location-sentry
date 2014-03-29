@@ -44,15 +44,17 @@ static NSDIiiPTR CLCopyAppsUsingLocation;
     NSString *bundle = [self.appList objectAtIndex:index];
     if (bundle) {
         NSDictionary *app = [self.locationApps objectForKey:bundle];
-        NSUInteger started = [[app objectForKey:@"LocationTimeStarted"] intValue];
-        NSUInteger stopped = [[app objectForKey:@"LocationTimeStopped"] intValue];
+        int started = [[app objectForKey:@"LocationTimeStarted"] intValue];
+        int stopped = [[app objectForKey:@"LocationTimeStopped"] intValue];
 
+        /*
         NSLog(@"%@ Background: %d Time: %d", bundle, started, [[app objectForKey:@"LocationTimeStarted"] intValue]);
         NSLog(@"%@ BackgroundStopped: %d Time Stopped: %d", bundle, stopped, [[app objectForKey:@"LocationTimeStopped"] intValue]);
+        */
         if (started != 0) {
-            return @"/Applications/Preferences.app/LocationActive.png";
+            return @"location_active.png";
         } else if (stopped != 0) {
-            return @"/Applications/Preferences.app/LocationRecent.png";
+            return @"location_recent.png";
         }
     }
     return nil;
