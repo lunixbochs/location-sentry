@@ -20,9 +20,9 @@
         /* top */
         // frame.origin.y = -8;
         /* bottom */
-        frame.origin.y = 280 - 24;
+        frame.origin.y = 280 - 30;
         /* right */
-        frame.origin.x = self.frame.size.width - 24;
+        frame.origin.x = self.frame.size.width - 30;
         /* left */
         // frame.origin.x = -8;
         /* x center */
