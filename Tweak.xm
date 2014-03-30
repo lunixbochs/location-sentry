@@ -14,7 +14,7 @@
     }
     NSString *icon = [[XBLocationManager sharedManager] iconForIndex:index - 1];
     if (icon != nil) {
-        UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:icon]];
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:icon]];
 
         CGRect frame = imageView.frame;
         frame.origin.x = self.frame.size.width / 2 - frame.size.width / 2;

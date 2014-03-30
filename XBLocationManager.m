@@ -52,9 +52,9 @@ static NSDIiiPTR CLCopyAppsUsingLocation;
         NSLog(@"%@ BackgroundStopped: %d Time Stopped: %d", bundle, stopped, [[app objectForKey:@"LocationTimeStopped"] intValue]);
         */
         if (started != 0) {
-            return @"location_active.png";
+            return @"LocationActive";
         } else if (stopped != 0) {
-            return @"location_recent.png";
+            return @"LocationRecent";
         }
     }
     return nil;
