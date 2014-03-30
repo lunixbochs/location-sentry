@@ -17,12 +17,28 @@
         UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:icon]];
 
         CGRect frame = imageView.frame;
-        frame.origin.x = self.frame.size.width / 2 - frame.size.width / 2;
-        frame.origin.y = -frame.size.height * 1.5;
+        /* top */
+        // frame.origin.y = -8;
+        /* bottom */
+        frame.origin.y = 280 - 24;
+        /* right */
+        frame.origin.x = self.frame.size.width - 24;
+        /* left */
+        // frame.origin.x = -8;
+        /* x center */
+        // frame.origin.x = self.frame.size.width / 2 - frame.size.width / 2;
+
         imageView.frame = frame;
 
         [self addSubview:imageView];
         [imageView release];
+    }
+}
+
+-(void)didAddSubview:(UIView *)subview {
+    %orig;
+    if ([NSStringFromClass([subview class]) isEqualToString:@"SBAppSwitcherPageView"]) {
+        [self sendSubviewToBack:subview];
     }
 }
 
