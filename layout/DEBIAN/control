@@ -1,7 +1,7 @@
 Package: info.bochs.location-sentry
 Name: Location Sentry
 Depends: mobilesubstrate
-Version: 1.0.0
+Version: 1.0.1
 Architecture: iphoneos-arm
 Description: Per-app Location Service indicators in the app switcher.
 Maintainer: Ryan Hileman
